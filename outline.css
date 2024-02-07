@@ -2,12 +2,24 @@
     margin: 0px;
     padding: 0px;
 }
+@font-face {
+    font-family: side_font;
+    src: url(VINERITC.TTF);
+}
+@font-face {
+    font-family: heading_font;
+    src: url(VIVALDII.TTF);
+}
+@font-face {
+    font-family: main_text_font;
+    src: url(PALSCRI.TTF);
+}
 #nav{
     display: flex;
     height: 10vh;
     justify-content: center;
     font-size: 63px;
-    font-family: Vivaldi;
+    font-family: heading_font;
     border-bottom: 2px solid black;
     background: linear-gradient(45deg, #e50303, #e3d8d8,#ef0d0d);
     
@@ -38,7 +50,7 @@
     padding: 10px;
     border-radius: 10px;
     font-size: 18px;
-    font-family: Viner Hand ITC;
+    font-family: side_font;
     background: radial-gradient(#f3eeee, #d62323);
 }
 .main {
@@ -66,7 +78,7 @@
     align-self: center;
     text-align: center;
     width: 100%;
-    font-family: "Palace Script MT";
+    font-family: main_text_font;
     font-size: 80px;
     /* display: none; */
 }
@@ -89,7 +101,7 @@
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    font-family: "Palace Script MT";
+    font-family: main_text_font;
     /* border: 2px solid black; */
     display: none;
 }
