@@ -92,7 +92,7 @@ function no_day(){
     m_text.style.display="none";
     welcome.style.display="block";
     welcome.style.fontSize="30px";
-    welcome.style.fontFamily=side_font;
+    welcome.style.fontFamily="side_font";
     welcome.innerHTML="Not Now<br>Jiska jo Din h usi din<br><br><div style='text-align:left;margin-left:500px;'>Check Dates:-<br>7th feb -Rose Day<br>8th feb -Propose Day<br>9th feb - Chocolate Day<br>10th feb -Teddy Day <br>11th feb - Promise Day <br> 12th feb -Hug Day <br> 13th feb - Kiss Day<br> 14th feb - Valentine's Day</div>";
     dummy.style.background="url(no_day_background.avif)";
     dummy.style.backgroundSize="100% 100%";
