@@ -54,12 +54,13 @@ function roseday(){
     // console.log("this is last");
 }
 function perposeday(){
-     clearInterval(perpose)
+    clearInterval(perpose)
     document.getElementById("welcome_txt").style.display="none";
-
+    audio.src="day2_audio.mpeg";
+    audio.volume=0.2;
     // dummy main to set the background blur
-    dummy.style.background="url(rose_circle.jpeg)";
-    dummy.style.filter="blur(5px)";
+    dummy.style.background="url(pdaybg1.jpg)";
+    dummy.style.filter="blur(2px)";
     dummy.style.backgroundSize="100% 100%";
 
     img.style.display="block";
@@ -76,14 +77,15 @@ function perposeday(){
         }
         else if (pic1=="day2_img1.jpg"){
             pic.animate([{opacity:0},{opacity:1}],{duration:1900});
-            pic.src="day2_img2.png";
+            pic.src="day2_img2.jpg";
         }
-        else if (pic1=="day2_img2.png"){
+        else if (pic1=="day2_img2.jpg"){
             pic.animate([{opacity:0},{opacity:1}],{duration:1900});
             pic.src="day2_img3.png";
         }
     },3600)
-    m_text.innerText="Happy Rose Day Meri Jaan.. ";
+    m_text.innerHTML="I Love you<br> Meri Jaan.. ";
+    m_text.style.fontSize="100px";
 }
 
 function no_day(){
