@@ -87,6 +87,40 @@ function perposeday(){
     m_text.innerHTML="I Love you<br> Meri Jaan.. ";
     m_text.style.fontSize="100px";
 }
+function chocolateday(){
+    clearInterval(chocolate)
+    document.getElementById("welcome_txt").style.display="none";
+    audio.src="day3_audio.mpeg";
+    audio.volume=0.2;
+    // dummy main to set the background blur
+    dummy.style.background="url(chocolate_day_bg.jpg)";
+    dummy.style.filter="blur(4px)";
+    dummy.style.backgroundSize="100% 100%";
+
+    img.style.display="block";
+    m_text.style.display="flex";
+
+    // to change image
+    pic.src="day3_img1.png";
+    chocolate=setInterval(function(){
+        let pic1=pic.getAttribute("src");
+
+        if(pic1=="day3_img3.png"){
+            pic.animate([{opacity:0},{opacity:1}],{duration:1900});
+            pic.src="day3_img1.png";
+        }
+        else if (pic1=="day3_img1.png"){
+            pic.animate([{opacity:0},{opacity:1}],{duration:1900});
+            pic.src="day3_img2.png";
+        }
+        else if (pic1=="day3_img2.png"){
+            pic.animate([{opacity:0},{opacity:1}],{duration:1900});
+            pic.src="day3_img3.png";
+        }
+    },3600)
+    m_text.innerHTML="Happy Chocolate Day<br> Meri Jaan.. ";
+    //m_text.style.fontSize="100px";
+}
 
 function no_day(){
 
