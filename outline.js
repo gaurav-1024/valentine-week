@@ -11,7 +11,8 @@ let btn5=document.getElementById("side_btn5");
 let btn6=document.getElementById("side_btn6");
 let btn7=document.getElementById("side_btn7");
 let btn8=document.getElementById("side_btn8");
-let rose,perpose,chocolate;
+let rose,perpose;
+let chocolate;
 
  let audio=document.getElementById("audio");
  let welcome=document.getElementById("welcome_txt");
