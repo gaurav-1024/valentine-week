@@ -12,7 +12,7 @@ let btn6=document.getElementById("side_btn6");
 let btn7=document.getElementById("side_btn7");
 let btn8=document.getElementById("side_btn8");
 let rose,perpose;
-let chocolate;
+let chocolate,teddy;
 
  let audio=document.getElementById("audio");
  let welcome=document.getElementById("welcome_txt");
@@ -120,6 +120,40 @@ function chocolateday(){
         }
     },3600)
     m_text.innerHTML="Happy Chocolate Day<br> Meri Jaan.. ";
+    //m_text.style.fontSize="100px";
+}
+function teddyday(){
+    clearInterval(teddy)
+    document.getElementById("welcome_txt").style.display="none";
+    audio.src="teddy_day_audio.mp3";
+    audio.volume=0.2;
+    // dummy main to set the background blur
+    dummy.style.background="url(teddy_day_bg1.jpg)";
+    dummy.style.filter="blur(4px)";
+    dummy.style.backgroundSize="100% 100%";
+
+    img.style.display="block";
+    m_text.style.display="flex";
+
+    // to change image
+    pic.src="day4_img1.png";
+    teddy=setInterval(function(){
+        let pic1=pic.getAttribute("src");
+
+        if(pic1=="day4_img3.png"){
+            pic.animate([{opacity:0},{opacity:1}],{duration:1900});
+            pic.src="day4_img1.png";
+        }
+        else if (pic1=="day4_img1.png"){
+            pic.animate([{opacity:0},{opacity:1}],{duration:1900});
+            pic.src="day4_img2.png";
+        }
+        else if (pic1=="day4_img2.png"){
+            pic.animate([{opacity:0},{opacity:1}],{duration:1900});
+            pic.src="day4_img3.png";
+        }
+    },3800)
+    m_text.innerHTML="Happy Teddy Day<br> Meri Jaan.. ";
     //m_text.style.fontSize="100px";
 }
 
