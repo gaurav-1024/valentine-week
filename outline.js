@@ -196,7 +196,7 @@ function hugday(){
     audio.src="hug_day_audio.mpeg";
     audio.volume=0.2;
     // dummy main to set the background blur
-    dummy.style.background="url(hug_day_bg.jpg)";
+    dummy.style.background="url(hug_day_bg1.jpg)";
     dummy.style.filter="blur(2px)";
     dummy.style.backgroundSize="100% 100%";
 
