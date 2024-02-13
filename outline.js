@@ -12,7 +12,7 @@ let btn6=document.getElementById("side_btn6");
 let btn7=document.getElementById("side_btn7");
 let btn8=document.getElementById("side_btn8");
 let rose,perpose;
-let chocolate,teddy,promise,hug;
+let chocolate,teddy,promise,hug,kiss;
 
  let audio=document.getElementById("audio");
  let welcome=document.getElementById("welcome_txt");
@@ -224,6 +224,41 @@ function hugday(){
     m_text.innerHTML="Happy Hug Day<br> Meri Jaan.. ";
     m_text.style.color="brown";
 }
+function kissday(){
+    clearInterval(kiss)
+    document.getElementById("welcome_txt").style.display="none";
+    audio.src="kiss_day_audio.mp3";
+    audio.volume=0.2;
+    // dummy main to set the background blur
+    dummy.style.background="url(kiss_day.jpg)";
+    dummy.style.filter="blur(2px)";
+    dummy.style.backgroundSize="100% 100%";
+
+    img.style.display="block";
+    m_text.style.display="flex";
+
+    // to change image
+    pic.src="day7_img1.png";
+    kiss=setInterval(function(){
+        let pic1=pic.getAttribute("src");
+
+        if(pic1=="day7_img3.png"){
+            pic.animate([{opacity:0},{opacity:1}],{duration:1900});
+            pic.src="day7_img1.png";
+        }
+        else if (pic1=="day7_img1.png"){
+            pic.animate([{opacity:0},{opacity:1}],{duration:1900});
+            pic.src="day7_img2.png";
+        }
+        else if (pic1=="day7_img2.png"){
+            pic.animate([{opacity:0},{opacity:1}],{duration:1900});
+            pic.src="day7_img3.png";
+        }
+    },4000)
+    m_text.innerHTML="Ek Chummi Udhar de de<br> Meri Jaan.. ";
+    // m_text.style.color="brown";
+}
+
 
 function no_day(){
 
