@@ -105,6 +105,16 @@
     /* border: 2px solid black; */
     display: none;
 }
+#view_btn {
+    position: absolute;
+    bottom: 11px;
+    left: 37%;
+    display: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 10px;
+}
 
 
 
