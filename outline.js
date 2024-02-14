@@ -12,7 +12,7 @@ let btn6=document.getElementById("side_btn6");
 let btn7=document.getElementById("side_btn7");
 let btn8=document.getElementById("side_btn8");
 let rose,perpose;
-let chocolate,teddy,promise,hug,kiss;
+let chocolate,teddy,promise,hug,kiss,valentine,valentine2;
 
  let audio=document.getElementById("audio");
  let welcome=document.getElementById("welcome_txt");
@@ -258,6 +258,77 @@ function kissday(){
     m_text.innerHTML="Ek Chummi Udhar de de<br> Meri Jaan.. ";
     // m_text.style.color="brown";
 }
+let view_btn=document.getElementById("view_btn");
+
+function valentineday(){
+    
+    document.getElementById("welcome_txt").style.display="none";
+    audio.src="valentine_day_audio.mp3";
+    audio.volume=0.2;
+    // dummy main to set the background blur
+    dummy.style.background="url(valentine_day.jpg)";
+    dummy.style.filter="blur(2px)";
+    dummy.style.backgroundSize="100% 100%";
+
+    img.style.display="block";
+    m_text.style.display="flex";
+
+    // to change image
+    
+    f1();
+    m_text.innerHTML="Happy Valentine's Day<br> Meri Jaan.. ";
+    m_text.style.color="black";
+}
+function f1(){
+    clearInterval(valentine)
+    pic.src="day8_img1.png";
+    valentine=setInterval(function(){
+        let pic1=pic.getAttribute("src");
+
+        if(pic1=="day8_img3.png"){
+            pic.animate([{opacity:0},{opacity:1}],{duration:1900});
+            pic.src="day8_img1.png";
+        }
+        else if (pic1=="day8_img1.png"){
+            pic.animate([{opacity:0},{opacity:1}],{duration:1900});
+            pic.src="day8_img2.png";
+        }
+        else if (pic1=="day8_img2.png"){
+            pic.animate([{opacity:0},{opacity:1}],{duration:1900});
+            pic.src="day8_img3.png";
+            clearInterval(valentine);
+            view_btn.style.display="inline";
+            view_btn.addEventListener("click",extra);
+        }
+        
+    },4000)}
+
+    function extra(){
+        view_btn.style.display="none";
+        pic.src="day8_img1_1.png";
+        valentine2=setInterval(function(){
+            let pic1=pic.getAttribute("src");
+            
+            if(pic1=="day8_img1_3.png"){
+                pic.animate([{opacity:0},{opacity:1}],{duration:1900});
+                clearInterval(valentine2);
+                view_btn.style.display="none";
+                f1();
+            }
+            else if (pic1=="day8_img1_1.png"){
+                pic.animate([{opacity:0},{opacity:1}],{duration:1900});
+                pic.src="day8_img1_2.png";
+            }
+            else if (pic1=="day8_img1_2.png"){
+                pic.animate([{opacity:0},{opacity:1}],{duration:1900});
+                pic.src="day8_img1_3.png";
+                
+                // view_btn.addEventListener("click",extra);
+            }
+            
+        },4000)
+    }
+
 
 
 function no_day(){
