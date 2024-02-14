@@ -53,6 +53,7 @@ function roseday(){
     },3600)
     m_text.innerText="Happy Rose Day Meri Jaan.. ";
     // console.log("this is last");
+ m_text.style.color="black";
 }
 function perposeday(){
     clearInterval(perpose)
@@ -87,6 +88,7 @@ function perposeday(){
     },3600)
     m_text.innerHTML="I Love you<br> Meri Jaan.. ";
     m_text.style.fontSize="100px";
+ m_text.style.color="black";
 }
 function chocolateday(){
     clearInterval(chocolate)
@@ -121,6 +123,7 @@ function chocolateday(){
     },3600)
     m_text.innerHTML="Happy Chocolate Day<br> Meri Jaan.. ";
     //m_text.style.fontSize="100px";
+ m_text.style.color="black";
 }
 function teddyday(){
     clearInterval(teddy)
@@ -155,6 +158,7 @@ function teddyday(){
     },3800)
     m_text.innerHTML="Happy Teddy Day<br> Meri Jaan.. ";
     //m_text.style.fontSize="100px";
+ m_text.style.color="black";
 }
 function promiseday(){
     clearInterval(promise)
@@ -189,6 +193,7 @@ function promiseday(){
     },3800)
     m_text.innerHTML="Happy Promise Day<br> Meri Jaan.. ";
     //m_text.style.fontSize="100px";
+ m_text.style.color="black";
 }
 function hugday(){
     clearInterval(hug)
@@ -257,6 +262,7 @@ function kissday(){
     },4000)
     m_text.innerHTML="Ek Chummi Udhar de de<br> Meri Jaan.. ";
     // m_text.style.color="brown";
+   m_text.style.color="black";
 }
 let view_btn=document.getElementById("view_btn");
 
